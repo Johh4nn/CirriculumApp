@@ -1,0 +1,94 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      <ion-icon name="person-circle" slot="start"></ion-icon>
+      Johan Sebastian Vargas Iza
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <!-- Foto de perfil -->
+  <ion-card class="profile-card">
+    <img alt="Perfil" src="assets/images/Perfi.jpeg" />
+  </ion-card>
+
+  <!-- Datos Personales -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Datos Personales</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Dirección:</strong> Conocoto, Barrio el Rosal, Av. Simón Bolívar, Oe6A</p>
+      <p><strong>Teléfono:</strong> 0987375174</p>
+      <p><strong>Correo Electrónico:</strong> johaniza1212@gmail.com</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Educación -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Educación</ion-card-title>
+      <ion-card-subtitle>Universidad</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Escuela Politécnica Nacional</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Lenguajes de Programación -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Lenguajes de Programación</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="chip-container">
+      <ion-chip color="primary">C++</ion-chip>
+      <ion-chip color="secondary">Java</ion-chip>
+      <ion-chip color="tertiary">Python</ion-chip>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botones de Interacción -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Acciones</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-button expand="full" color="success" id="open-action-sheet">
+        <ion-icon name="ellipsis-vertical" slot="start"></ion-icon> Abrir Acciones
+      </ion-button>
+
+      <ion-action-sheet trigger="open-action-sheet" header="Acciones Disponibles" [buttons]="actionSheetButtons"></ion-action-sheet>
+      
+      <ion-button expand="full" color="danger" id="present-alert" class="mt-3">
+        <ion-icon name="alert-circle" slot="start"></ion-icon> ¡Cuidado!
+      </ion-button>
+      <ion-alert trigger="present-alert" class="custom-alert" header="¿Estás seguro?" [buttons]="alertButtons"></ion-alert>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<!-- Estilos personalizados -->
+<style>
+  .profile-card img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    margin: 10px auto;
+  }
+  .chip-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  .mt-3 {
+    margin-top: 16px;
+  }
+  .custom-alert .alert-wrapper {
+    background-color: #ffecb3;
+    border-radius: 10px;
+  }
+</style>
